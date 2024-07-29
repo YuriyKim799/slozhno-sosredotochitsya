@@ -148,7 +148,6 @@
 .section__images-container {
   display: grid;
   grid-template-columns: minmax(min(375px, 100%), 1fr);
-  gap: 10px;
 }
 
 .section__images-wrap {
@@ -164,7 +163,6 @@
 .footer {
   display: grid;
   grid-template-rows: 100vh;
-
   padding-inline-start: 10px;
   padding-inline-end: 10px;
   background-color: var(--content-bgc-color);
@@ -211,7 +209,7 @@
   justify-self: center;
 }
 
-@media (min-width: 768px) and (orientation: landscape) {
+@media (max-width: 768px) and (orientation: landscape) {
   .header__theme-menu {
     margin-block-start: 146px;
   }
@@ -285,7 +283,7 @@
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) and (orientation: landscape) {
   .header__theme-menu {
     margin-block-start: 10px;
     margin-inline-end: 0px;
