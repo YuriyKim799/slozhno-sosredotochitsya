@@ -151,7 +151,13 @@
   gap: 10px;
 }
 
+.section__images-wrap {
+  display: grid;
+  gap: 20px;
+}
+
 .section__img {
+  display: block;
   max-width: 100%;
 }
 
