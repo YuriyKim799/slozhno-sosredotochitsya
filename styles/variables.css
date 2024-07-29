@@ -4,10 +4,13 @@
 */
 
 :root {
+  --display-none: block;
   --accent-color: #ff0070;
-  --content-bgc-color: #000028;
-  --header__title-accent-color: #db00ff;
-  --dark-bgc-color: #000028;
+  --menu-text: #ff0070;
+  --header__text-accent-color: #000028;
   --section__text: #f1b2ce;
-  --background-image: url("../images/cover-image.png");
+  --content-bgc-color: #000028;
+  --border-color-hover: rgba(255, 0, 112, 40%);
+  --header__title-accent-color: #db00ff;
+  --background-image: url("../images/cover-image-dark.png");
 }

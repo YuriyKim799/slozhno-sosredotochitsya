@@ -9,37 +9,26 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --accent-color: #ff8dcb;
-  --content-bgc-color: #FFF1F7;
+  --display-none: none;
   --header__title-accent-color: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --menu-text: #353430;
   --header__text-accent-color: #353430;
+  --section__text: #353430;
+  --content-bgc-color: #fff1f7;
+  --border-color-hover: #32312d66;
   --background-image: url("../images/cover-image-light.png");
 }
 
-.page.theme_light .header__decorated-text {
-  display: none;
-}
-
-.page.theme_light .header__theme-menu-button {
-  color: var(--header__text-accent-color);
-}
-
-.page.theme_light .header__theme-menu-button:hover {
-  border: 1px solid var(--header__text-accent-color);
-}
-
-.page.theme_light .header__theme-menu-button:focus {
-  border: 1px solid var(--header__text-accent-color);
-}
-
-.page.theme_light .section__title {
-  color: var(--header__text-accent-color);
-}
-
-.page.theme_light .section__subtitle {
-  color: var(--header__text-accent-color);
-}
-
-.page.theme_light .section__text {
-  color: var(--header__text-accent-color);
+@media (prefers-color-scheme: light) {
+  :root {
+    --display-none: none;
+    --header__title-accent-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --menu-text: #353430;
+    --section__text: #353430;
+    --content-bgc-color: #fff1f7;
+    --border-color-hover: #32312d66;
+    --background-image: url("../images/cover-image-light.png");
+  }
 }

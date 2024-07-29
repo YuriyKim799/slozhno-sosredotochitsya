@@ -6,7 +6,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--content-bgc-color);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -17,7 +16,9 @@
 }
 
 .header__decorated-text {
-  position: relative;
+  right: 1px;
+  position: absolute;
+  display: var(--display-none);
 }
 
 .header__decorated-text::after {
@@ -59,7 +60,7 @@
 }
 
 .header__theme-menu-button {
-  color: var(--accent-color);
+  color: var(--menu-text);
   text-transform: lowercase;
   background-color: transparent;
   border: 1px solid transparent;
@@ -67,18 +68,22 @@
   line-height: 18px;
 }
 
-.header__theme-menu-button:has(.header__theme-menu-button_active) {
+.header__theme-menu-button_active {
+  border: 1px solid var(--menu-text);
+}
+
+.header__theme-menu-item:has(.header__theme-menu-button_active) {
   pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
   cursor: pointer;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--border-color-hover);
 }
 
-.header__theme-menu-button:focus {
+.header__theme-menu-button:focus-visible {
   outline: none;
-  border: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--menu-text);
 }
 
 .header__title {
@@ -86,13 +91,13 @@
   font-weight: 700;
   line-height: 95.7px;
   color: var(--header__title-accent-color);
-  text-shadow: 4px 4px #ff0070;
+  text-shadow: 4px 4px var(--accent-color);
   margin-block-start: 65px;
 }
 
 .header__text {
   background-color: var(--accent-color);
-  color: var(--dark-bgc-color);
+  color: var(--header__text-accent-color);
   font-weight: 700;
   line-height: 23.4px;
   margin: 55px 10px 66px 10px;
@@ -107,7 +112,7 @@
 }
 
 .section__title {
-  color: var(--accent-color);
+  color: var(--menu-text);
   line-height: 23.4px;
   padding-block-end: 20px;
   font-size: 18px;
@@ -115,7 +120,7 @@
 }
 
 .section__subtitle {
-  color: var(--dark-bgc-color);
+  color: var(--header__text-accent-color);
   background-color: var(--accent-color);
   margin-block-end: 10px;
   font-size: 18px;
@@ -133,7 +138,21 @@
 
 .section__text-link {
   text-decoration: none;
+  display: inline-block;
+  height: 19px;
+  padding-inline-end: 2px;
+  border: 1px solid transparent;
+  line-height: 12px;
   text-shadow: 2px 2px var(--accent-color);
+}
+
+.section__text-link:hover {
+  border-block-end: 1px solid var(--menu-text);
+}
+
+.section__text-link:focus-visible {
+  outline: none;
+  border: 1px solid var(--menu-text);
 }
 
 .large__section .section__subtitle {
@@ -216,6 +235,7 @@
 
   .header__title {
     margin-block-start: 173px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__text {
@@ -297,10 +317,12 @@
 
   .header__title {
     margin-block-start: 273px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__text {
     max-width: 491px;
+    max-height: 71px;
     margin-block-start: 114px;
     margin-block-end: 134px;
   }
