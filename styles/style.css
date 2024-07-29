@@ -1,5 +1,317 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+  background-image: var(--background-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--content-bgc-color);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.header {
+  display: grid;
+  position: relative;
+}
+
+.header__decorated-text {
+  position: relative;
+}
+
+.header__decorated-text::after {
+  content: "";
+  display: block;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  position: absolute;
+  top: 18px;
+  right: 19px;
+}
+
+.header__decorated-text::before {
+  content: "REC";
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 38px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--accent-color);
+}
+
+.header__theme-menu {
+  margin-block-start: 75px;
+  margin-inline-end: 10px;
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+  text-transform: lowercase;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 1.5px 13px;
+  line-height: 18px;
+}
+
+.header__theme-menu-button:has(.header__theme-menu-button_active) {
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  cursor: pointer;
+  border: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 95.7px;
+  color: var(--header__title-accent-color);
+  text-shadow: 4px 4px #ff0070;
+  margin-block-start: 65px;
+}
+
+.header__text {
+  background-color: var(--accent-color);
+  color: var(--dark-bgc-color);
+  font-weight: 700;
+  line-height: 23.4px;
+  margin: 55px 10px 66px 10px;
+}
+
+.content {
+  background-color: var(--content-bgc-color);
+  display: grid;
+  grid-template-columns: minmax(min(375px, 100%), 1fr);
+  padding: 50px 10px 40px 10px;
+  gap: 30px;
+}
+
+.section__title {
+  color: var(--accent-color);
+  line-height: 23.4px;
+  padding-block-end: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.section__subtitle {
+  color: var(--dark-bgc-color);
+  background-color: var(--accent-color);
+  margin-block-end: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.section__text {
+  color: var(--section__text);
+  padding-block-end: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+}
+
+.section__text-link {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--accent-color);
+}
+
+.large__section .section__subtitle {
+  font-weight: 400;
+}
+
+.large__section .accent {
+  font-weight: 700;
+  margin-block-end: 20px;
+}
+
+.section__images-container {
+  display: grid;
+  grid-template-columns: minmax(min(375px, 100%), 1fr);
+  gap: 10px;
+}
+
+.section__img {
+  max-width: 100%;
+}
+
+.footer {
+  display: grid;
+  grid-template-rows: 667px;
+
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+  background-color: var(--content-bgc-color);
+}
+
+.decorated-zone {
+  position: relative;
+  z-index: 1;
+}
+
+.decorated-zone::after,
+.decorated-zone::before {
+  content: "";
+  height: 25px;
+  width: 25px;
+  display: block;
+  border: 1px solid transparent;
+  position: absolute;
+}
+
+.decorated-zone::after {
+  bottom: 10px;
+  left: 10px;
+  border-top: none;
+  border-right: none;
+  border-color: var(--accent-color);
+}
+
+.decorated-zone::before {
+  top: 10px;
+  right: 10px;
+  border-left: none;
+  border-bottom: none;
+  border-color: var(--accent-color);
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 95.7px;
+  color: var(--header__title-accent-color);
+  text-shadow: 4px 4px #ff0070;
+  align-self: center;
+  justify-self: center;
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .header__theme-menu {
+    margin-block-start: 146px;
+  }
+
+  .header__title {
+    margin-block-start: 173px;
+  }
+
+  .header__text {
+    justify-self: end;
+    max-width: 364px;
+    margin-block-start: 162px;
+    margin-block-end: 183px;
+  }
+
+  .small__section,
+  .large__section {
+    display: flex;
+    gap: 20px;
+  }
+
+  .content {
+    gap: 60px;
+    padding-block-end: 80px;
+  }
+
+  .section__title {
+    min-width: 236px;
+  }
+
+  .section__images-wrap {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+  }
+
+  .sunset {
+    grid-area: sunset;
+  }
+
+  .ice-cream {
+    height: 100%;
+    object-fit: cover;
+    grid-area: ice-cream;
+  }
+
+  .tape {
+    height: 100%;
+    object-fit: cover;
+    grid-area: tape;
+  }
+
+  .books {
+    grid-area: books;
+  }
+
+  .street {
+    width: 100%;
+    grid-area: street;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: minmax(min(375px, 100%), 1fr);
+    margin-block-start: 0px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .header__theme-menu {
+    margin-block-start: 10px;
+    margin-inline-end: 0px;
+    justify-self: center;
+    align-self: flex-start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__title {
+    margin-block-start: 273px;
+  }
+
+  .header__text {
+    max-width: 491px;
+    margin-block-start: 114px;
+    margin-block-end: 134px;
+  }
+
+  .medium__section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .section__title-wrap {
+    max-width: 315px;
+  }
+
+  .medium__section-subtitle-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 }
