@@ -102,7 +102,7 @@
   background-color: var(--content-bgc-color);
   display: grid;
   grid-template-columns: minmax(min(375px, 100%), 1fr);
-  padding: 50px 10px 40px 10px;
+  padding: 40px 10px 40px 10px;
   gap: 30px;
 }
 
