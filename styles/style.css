@@ -12,6 +12,7 @@
 
 .header {
   display: grid;
+  height: 100%;
   position: relative;
 }
 
@@ -156,7 +157,7 @@
 
 .footer {
   display: grid;
-  grid-template-rows: 667px;
+  grid-template-rows: 100vh;
 
   padding-inline-start: 10px;
   padding-inline-end: 10px;
