@@ -185,8 +185,7 @@
 .footer {
   display: grid;
   grid-template-rows: 100vh;
-  padding-inline-start: 10px;
-  padding-inline-end: 10px;
+  padding-inline: 10px;
   background-color: var(--content-bgc-color);
 }
 
@@ -264,7 +263,7 @@
 
   .header__title {
     margin-block-start: 173px;
-    margin-inline-start: -12px;
+    margin-inline-start: -13px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -283,7 +282,7 @@
 
   .content {
     gap: 80px;
-    padding: 60px 20px 80px 20px;
+    padding: 60px 20px 60px 20px;
   }
 
   .section__title {
@@ -329,6 +328,7 @@
   .footer {
     display: grid;
     grid-template-columns: minmax(min(375px, 100%), 1fr);
+    padding-inline: 20px;
     margin-block-start: 0px;
   }
 }
