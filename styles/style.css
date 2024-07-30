@@ -12,7 +12,7 @@
 .header {
   display: grid;
   min-height: 100vh;
-  position: relative;
+  padding: 10px;
 }
 
 .header__decorated-text {
@@ -48,7 +48,6 @@
 
 .header__theme-menu {
   margin-block-start: 75px;
-  margin-inline-end: 10px;
   justify-self: end;
 }
 
@@ -108,7 +107,7 @@
   display: grid;
   grid-template-columns: minmax(min(375px, 100%), 1fr);
   padding: 40px 10px 40px 10px;
-  gap: 30px;
+  gap: 50px;
 }
 
 .section__title {
@@ -128,9 +127,13 @@
   line-height: 23.4px;
 }
 
+.section__subtitle-wrap .section__text:not(:last-child) {
+  padding-block-end: 20px;
+}
+
 .section__text {
   color: var(--section__text);
-  padding-block-end: 20px;
+  /* padding-block-end: 20px; */
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -229,12 +232,39 @@
 }
 
 @media (min-width: 768px) {
+  .header {
+    padding: 20px;
+  }
+
   .header__theme-menu {
     margin-block-start: 146px;
   }
 
+  .header__decorated-text::after {
+    /* * */
+    top: 28px;
+    right: 29px;
+  }
+
+  .header__decorated-text::before {
+    /* REC */
+    top: 20px;
+    right: 48px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
   .header__title {
     margin-block-start: 173px;
+    margin-inline-start: -12px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -252,12 +282,12 @@
   }
 
   .content {
-    gap: 60px;
-    padding-block-end: 80px;
+    gap: 80px;
+    padding: 60px 20px 80px 20px;
   }
 
   .section__title {
-    min-width: 236px;
+    max-width: 236px;
   }
 
   .section__images-wrap {
@@ -305,10 +335,8 @@
 
 @media (min-width: 1024px) {
   .header__theme-menu {
-    margin-block-start: 10px;
-    margin-inline-end: 0px;
+    margin: 0;
     justify-self: center;
-    align-self: flex-start;
   }
 
   .header__theme-menu-list {
@@ -332,8 +360,8 @@
     grid-template-columns: 1fr;
   }
 
-  .section__title-wrap {
-    max-width: 315px;
+  .section__title {
+    min-width: 315px;
   }
 
   .medium__section-subtitle-wrap {
