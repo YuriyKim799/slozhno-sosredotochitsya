@@ -4,13 +4,20 @@
 */
 
 :root {
+  --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --display-none: block;
   --accent-color: #ff0070;
-  --menu-text: #ff0070;
+  --currentColor: #ff0070;
   --header__text-accent-color: #000028;
   --section__text: #f1b2ce;
   --content-bgc-color: #000028;
   --border-color-hover: rgba(255, 0, 112, 40%);
   --header__title-accent-color: #db00ff;
   --background-image: url("../images/cover-image-dark.png");
+}
+
+@media (width >= 768px) {
+  :root {
+    --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }

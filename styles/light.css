@@ -12,7 +12,7 @@
   --display-none: none;
   --header__title-accent-color: #ffc2e6;
   --accent-color: #ff8dcb;
-  --menu-text: #353430;
+  --currentColor: #353430;
   --header__text-accent-color: #353430;
   --section__text: #353430;
   --content-bgc-color: #fff1f7;
@@ -25,7 +25,7 @@
     --display-none: none;
     --header__title-accent-color: #ffc2e6;
     --accent-color: #ff8dcb;
-    --menu-text: #353430;
+    --currentColor: #353430;
     --section__text: #353430;
     --header__text-accent-color: #353430;
     --content-bgc-color: #fff1f7;
