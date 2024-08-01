@@ -7,12 +7,12 @@
   --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --display-none: block;
   --accent-color: #ff0070;
-  --currentColor: #ff0070;
-  --header__text-accent-color: #000028;
-  --section__text: #f1b2ce;
+  --current-color: #ff0070;
+  --dark-text-color: #000028;
+  --section-text-color: #f1b2ce;
   --content-bgc-color: #000028;
   --border-color-hover: rgba(255, 0, 112, 40%);
-  --header__title-accent-color: #db00ff;
+  --title-accent-color: #db00ff;
   --background-image: url("../images/cover-image-dark.png");
 }
 

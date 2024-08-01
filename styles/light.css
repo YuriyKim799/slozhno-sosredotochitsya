@@ -10,11 +10,11 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --display-none: none;
-  --header__title-accent-color: #ffc2e6;
+  --title-accent-color: #ffc2e6;
   --accent-color: #ff8dcb;
-  --currentColor: #353430;
-  --header__text-accent-color: #353430;
-  --section__text: #353430;
+  --current-color: #353430;
+  --dark-text-color: #353430;
+  --section-text-color: #353430;
   --content-bgc-color: #fff1f7;
   --border-color-hover: #32312d66;
   --background-image: url("../images/cover-image-light.png");
@@ -23,11 +23,11 @@
 @media (prefers-color-scheme: light) {
   :root {
     --display-none: none;
-    --header__title-accent-color: #ffc2e6;
+    --title-accent-color: #ffc2e6;
     --accent-color: #ff8dcb;
-    --currentColor: #353430;
-    --section__text: #353430;
-    --header__text-accent-color: #353430;
+    --current-color: #353430;
+    --section-text-color: #353430;
+    --dark-text-color: #353430;
     --content-bgc-color: #fff1f7;
     --border-color-hover: #32312d66;
     --background-image: url("../images/cover-image-light.png");
